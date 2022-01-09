@@ -1,0 +1,15 @@
+How to fix fatal:the current branch master has no upstream branch
+
+
+The fatal: The current branch master has no upstream branch error occurs when you have not configured git in such a way that it creates a new branch on the remote. Therefore, you are only creating a new branch on the local computer.
+
+Solution
+You can fix the issue by typing:
+
+""git push -u origin master""
+This will fix the error, but only for the current issue. The following is a permanent fix that will automatically create a remote branch:
+
+""git config --global push.default current""
+The command above will fix the error and will always create a remote branch that tracks the local branch.
+
+aqil Ahmad's notes
